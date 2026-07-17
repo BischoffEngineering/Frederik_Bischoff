@@ -1,0 +1,26 @@
+# macOS
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Lokale Vorschau (nicht online benoetigt)
+vorschau_offline.html
+
+# README nicht veroeffentlichen
+README.md
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*~
+
+# Logs / temporaere Dateien
+*.log
+*.tmp
+tmp/
