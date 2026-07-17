@@ -155,6 +155,14 @@ footer{text-align:center;color:var(--muted);font-size:.82rem;padding:30px 0 40px
 .maplink{display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-weight:800;font-size:.84rem;color:var(--accent)}
 .maplink svg{width:14px;height:14px}
 .leaflet-container{font-family:inherit}
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:6px}
+.gimg{position:relative;margin:0;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:var(--bg)}
+.gimg img{display:block;width:100%;height:160px;object-fit:cover}
+.gimg figcaption{font-size:.78rem;color:var(--muted);padding:6px 10px}
+.gimg .ph{display:none}
+.gimg.missing .ph{display:flex;align-items:center;justify-content:center;height:110px;padding:10px;
+  text-align:center;font-size:.78rem;color:var(--muted);border-bottom:1px dashed var(--line)}
+@media(max-width:520px){.gallery{grid-template-columns:1fr}}
 
 @keyframes up{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
 @keyframes pop{from{opacity:0;transform:scale(.8)}to{opacity:1;transform:none}}
@@ -255,49 +263,48 @@ const ICON = {
 const STATIONS = [
   {year:'2010 – 2019', title:'Allgemeine Hochschulreife', org:'Gymnasium Remchingen', loc:'Remchingen', icon:'school',
    text:'Naturwissenschaftlicher Schwerpunkt. Drei Jahre Schülersprecher, Fördervereinspreis für besonderes Engagement.',
-   geo:{lat:48.9339,lng:8.5731,zoom:14}},
+   geo:{lat:48.954587457589184,lng:8.57620565503179,zoom:16}},
   {year:'2015 – 2020', title:'Aushilfskraft Landwirtschaft', org:'Betrieb Michael Uckele', loc:'Karlsbad', icon:'brief',
    text:'Mitarbeit im landwirtschaftlichen Betrieb mit Fokus auf Landmaschinentechnik – Ursprung der Leidenschaft für Technik.',
-   geo:{lat:48.9010,lng:8.5090,zoom:13}},
+   geo:{lat:48.93665242431679,lng:8.495770717427403,zoom:16}},
   {year:'2016 – 2017', title:'Schulisches Auslandsjahr', org:'Evergreen Highschool, Seattle', loc:'USA', icon:'globe',
    text:'Ein Jahr in den USA – über eigene Grenzen hinausgewachsen, Englisch verbessert, neue Kultur & Sport kennengelernt.',
-   geo:{lat:47.5150,lng:-122.3490,zoom:12}},
+   geo:{lat:47.500394723019014,lng:-122.3434693568073,zoom:16}},
+  {year:'2016', title:'Praktikum Straßen- & Brückenbau', org:'Regierungspräsidium Karlsruhe', loc:'BAB 8, Karlsbad', icon:'brief',
+   text:'Baustelle 6-streifiger Ausbau der BAB 8 zwischen Karlsbad und Pforzheim-West.',
+   geo:{lat:48.9339558,lng:8.5561150,zoom:15}},
   {year:'2019 – 2020', title:'Volontariat', org:'Purtatorii de Faclie, Râsnov', loc:'Rumänien', icon:'heart',
    text:'Leitung von Skikursen und Baustellentätigkeiten für ein neues Freizeithaus – Verantwortung und Teamführung.',
-   geo:{lat:45.5936,lng:25.4600,zoom:12}},
+   geo:{lat:45.52471147147974,lng:25.446504337013664,zoom:15}},
   {year:'2020', title:'Vorpraktikum Maschinenbau', org:'Strohheker-Schulz Stanz- und Hybridtechnik', loc:'Pforzheim', icon:'brief',
    text:'Einblick in Metallverarbeitung, Konstruktion und Qualitätssicherung.',
-   geo:{lat:48.8922,lng:8.6946,zoom:13}},
-  {year:'2020', title:'Praktikum Straßen- & Brückenbau', org:'Regierungspräsidium Karlsruhe', loc:'BAB 8, Karlsbad', icon:'brief',
-   text:'Baustelle 6-streifiger Ausbau der BAB 8 zwischen Karlsbad und Pforzheim-West.',
-   geo:{lat:48.9010,lng:8.5150,zoom:12}},
+   geo:{lat:48.858415731803376,lng:8.701641862420166,zoom:16}},
   {year:'2020 – 2024', title:'Bachelorstudium Maschinenbau (B.Eng.)', org:'HTWG Hochschule Konstanz', loc:'Konstanz', icon:'cap',
    text:'Vertiefung Mechatronik, E-Mobilität und Fahrzeugtechnik – der Grundstein für die Elektrotechnik.',
-   geo:{lat:47.6667,lng:9.1719,zoom:15}},
+   geo:{lat:47.66786554235014,lng:9.170969812158194,zoom:16}},
   {year:'2021 – 2022', title:'Tutor Technische Mechanik & Mathematik', org:'HTWG Konstanz', loc:'Konstanz', icon:'cap',
    text:'Fachliche Betreuung von Erstsemesterstudierenden im Maschinenbau.',
-   geo:{lat:47.6667,lng:9.1719,zoom:15}},
+   geo:{lat:47.66786554235014,lng:9.170969812158194,zoom:16}},
   {year:'2022', title:'Industriepraktikum', org:'Horsch Maschinen GmbH', loc:'Schwandorf', icon:'brief',
    text:'Entwicklung einer Erweiterung für die moderne Einzelkorn-Sätechnik.',
-   geo:{lat:49.3268,lng:12.1090,zoom:14}},
+   geo:{lat:49.3334833174854,lng:12.060420463643068,zoom:16}},
   {year:'2022 – 2023', title:'Werkstudent', org:'Horsch Maschinen GmbH', loc:'Schwandorf', icon:'brief',
    text:'Begleitung des Entwicklungsprojekts bis zur Serienreife – Einblick in zentrale Prozesse des Ingenieurwesens.',
-   geo:{lat:49.3268,lng:12.1090,zoom:14}},
+   geo:{lat:49.3334833174854,lng:12.060420463643068,zoom:16}},
   {year:'2023 – 2024', title:'Bachelorarbeit', org:'Karlsruher Institut für Technologie (KIT)', loc:'Karlsruhe', icon:'battery',
-   text:'Software-Framework zur automatisierten Analyse von Batteriespeichersystemen.', milestone:'ba',
-   geo:{lat:49.0092,lng:8.4103,zoom:15}},
-  {year:'2023 – 2024', title:'PV-Anlage 21 kWp – Privatprojekt', org:'Garagendach der Eltern', loc:'Remchingen', icon:'sun',
-   text:'Planung & technische Umsetzung einer 21-kWp-Photovoltaikanlage mit 16-kWh-Batteriespeicher.', milestone:'pv',
-   geo:{lat:48.9339,lng:8.5731,zoom:13}},
+   text:'Software-Framework zur automatisierten Analyse von Batteriespeichersystemen.', milestone:true, detail:'ba',
+   geo:{lat:49.0942,lng:8.4318,zoom:16}},
+  {year:'2023', title:'PV-Anlage 21 kWp – Privatprojekt', org:'Garagendach der Eltern', loc:'', icon:'sun',
+   text:'Eigenverantwortliche Planung & Umsetzung – 21 kWp mit SMA-Hybrid-Wechselrichter und 16,6-kWh-BYD-Speicher.', detail:'pv'},
   {year:'seit 2024', title:'Masterstudium Mechatronik (M.Sc.)', org:'Universität Stuttgart', loc:'Stuttgart', icon:'cpu',
    text:'Schwerpunkt Schaltungstechnik, Leistungselektronik, elektrische Maschinen und deren Ansteuerung.',
-   geo:{lat:48.7456,lng:9.1064,zoom:14}},
+   geo:{lat:48.746043963643615,lng:9.105502120971805,zoom:16}},
   {year:'seit 2024', title:'Werkstudent Qualitätssicherung', org:'STIHL', loc:'Waiblingen', icon:'brief',
    text:'Automatisierung mit Python & VBA sowie eigene Hardwareentwicklung.',
-   geo:{lat:48.8186,lng:9.3170,zoom:14}},
+   geo:{lat:48.85643520526851,lng:9.328969984517034,zoom:16}},
   {year:'2026', title:'Masterarbeit', org:'ISW, Universität Stuttgart', loc:'Stuttgart', icon:'cpu',
-   text:'Echtzeit-Verlusterfassung von GaN-HEMTs in einem dreiphasigen Umrichter.', milestone:'ma',
-   geo:{lat:48.7404,lng:9.0968,zoom:15}},
+   text:'Echtzeit-Verlusterfassung von GaN-HEMTs in einem dreiphasigen Umrichter.', milestone:true, detail:'ma',
+   geo:{lat:48.78131743804567,lng:9.165863475356465,zoom:16}},
   {year:'Heute', title:'Auf dem Weg in die Energiewende', org:'Nächstes Kapitel', loc:'', icon:'flag',
    text:'Technische Tiefe, Projektverantwortung und Begeisterung für erneuerbare Energien – bereit für den nächsten Schritt.'}
 ];
@@ -326,22 +333,28 @@ const DETAILS = {
     todo:'Für den Ausbau: Note, konkrete Kennzahlen/KPIs, verwendete Tools & Bibliotheken, ggf. ein Diagramm oder Screenshot des Frameworks.'
   },
   pv:{
-    year:'2023 – 2024', title:'PV-Anlage 21 kWp mit 16-kWh-Speicher', org:'Privatprojekt · Garagendach der Eltern',
+    year:'2023', title:'PV-Anlage 21 kWp mit Batteriespeicher', org:'Privatprojekt · Flach- und Garagendach',
     body:`
       <h5>Überblick</h5>
-      <p>Eigenverantwortliche Planung und technische Umsetzung einer 21-kWp-Photovoltaikanlage
-      mit 16-kWh-Batteriespeicher – von der Auslegung bis zum Netzanschluss.</p>
-      <h5>Was ich übernommen habe</h5>
+      <p>Eigenverantwortliche Planung und technische Umsetzung einer Photovoltaikanlage mit
+      21 kWp Gesamtleistung auf Flach- und Garagendach – inklusive Batteriespeicher und Netzanschluss.</p>
+      <h5>Technische Eckdaten</h5>
       <ul>
-        <li>Technische Auslegung von Modulen, Wechselrichter und Speicher</li>
-        <li>Berücksichtigung relevanter Normen und der Prozesse rund um den Netzanschluss</li>
-        <li>Praxisthemen wie Blindleistungskompensation, Netzverträglichkeit und Leistungsfaktor cos&nbsp;φ</li>
+        <li><b>PV-Leistung gesamt:</b> 21 kWp</li>
+        <li><b>Hybrid-Wechselrichter:</b> SMA Sunny Tripower Smart Energy – 10 kW</li>
+        <li><b>Batteriespeicher:</b> BYD Battery-Box Premium HVM – 16,6 kWh</li>
+        <li><b>Garage 1:</b> zusätzlicher SMA-Wechselrichter, 8 kWp Modulleistung</li>
       </ul>
-      <h5>Warum es zählt</h5>
-      <p>Technische Anforderungen, Normen und Netzanschluss-Prozesse sind mir dadurch aus erster
-      Hand vertraut – die ideale Grundlage für Projektverantwortung im PV-Bereich.</p>`,
-    tags:['21 kWp','16 kWh Speicher','Netzanschluss','cos φ','Normen','Projektplanung'],
-    todo:'Für den Ausbau: Fotos der Anlage, Ertragsdaten/Autarkiegrad, verwendete Komponenten (Hersteller/Modelle), Zeitraum & Herausforderungen.'
+      <h5>Meine Rolle</h5>
+      <p>Auslegung der Komponenten, Berücksichtigung relevanter Normen, Abwicklung des
+      Netzanschlusses sowie Themen wie Blindleistungskompensation, Netzverträglichkeit und Leistungsfaktor cos&nbsp;φ.</p>`,
+    tags:['21 kWp','SMA Hybrid 10 kW','BYD HVM 16,6 kWh','Netzanschluss','cos φ','Eigenbau'],
+    images:[
+      {file:'pv_flachdach.jpg', cap:'PV-Module auf dem Flachdach'},
+      {file:'cad_garage_2.jpg', cap:'CAD-Planung Garagendach'},
+      {file:'garage_1.jpg', cap:'Garage 1 mit PV-Anlage'}
+    ],
+    todo:'Lege die Bilder pv_flachdach.jpg, cad_garage_2.jpg und garage_1.jpg im Ordner assets/ ab – sie erscheinen dann automatisch. Optional: Jahresertrag & Autarkiegrad ergänzen.'
   },
   ma:{
     year:'2026', title:'Masterarbeit: GaN-Wechselrichter', org:'ISW · Universität Stuttgart',
@@ -371,8 +384,8 @@ STATIONS.forEach((s,i)=>{
   const orgHtml = s.geo
     ? `<button class="orglink" data-i="${i}" title="Standort auf der Karte ansehen">${s.org}${pin}</button>`
     : `${s.org}`;
-  const moreBtn = s.milestone
-    ? `<button class="more" data-key="${s.milestone}">Mehr erfahren
+  const moreBtn = s.detail
+    ? `<button class="more" data-key="${s.detail}">Mehr erfahren
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>` : '';
   const actions = moreBtn ? `<div class="actions">${moreBtn}</div>` : '';
   el.innerHTML = `
@@ -463,6 +476,13 @@ function openDetail(key){
     </div>
     <div class="modal-bd">
       ${d.body}
+      ${d.images?`<h5>Bilder</h5><div class="gallery">${d.images.map(im=>`
+        <figure class="gimg">
+          <img src="assets/${im.file}" alt="${im.cap}" loading="lazy"
+               onerror="this.style.display='none';this.parentNode.classList.add('missing')">
+          <span class="ph">Bild folgt · ${im.file}</span>
+          <figcaption>${im.cap}</figcaption>
+        </figure>`).join('')}</div>`:''}
       <div class="tags">${d.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>
       ${d.todo?`<div class="todo"><b>Noch ergänzen:</b> ${d.todo}</div>`:''}
     </div>`;
