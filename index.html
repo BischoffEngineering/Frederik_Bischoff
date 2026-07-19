@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Frederik Bischoff – Mein Weg</title>
-<meta name="description" content="Frederik Bischoff – B.Eng. Maschinenbau, M.Sc. Mechatronik. Mein Werdegang rund um erneuerbare Energien, Leistungselektronik und Batteriespeicher.">
+<title>Frederik Bischoff, Werdegang</title>
+<meta name="description" content="Frederik Bischoff, B.Eng. Maschinenbau, M.Sc. Mechatronik. Werdegang rund um erneuerbare Energien, Leistungselektronik und Batteriespeicher.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
@@ -139,11 +139,11 @@ footer{text-align:center;color:var(--muted);font-size:.82rem;padding:30px 0 40px
   box-shadow:var(--shadow);cursor:pointer;font-size:1.2rem;color:var(--petrol);display:grid;place-items:center;transition:transform .2s,background .2s}
 .close:hover{transform:rotate(90deg);background:var(--accent);color:#fff}
 .modal-bd{padding:24px 30px 30px}
-.modal-bd h5{color:var(--accent);text-transform:uppercase;letter-spacing:1px;font-size:.76rem;font-weight:900;margin:20px 0 6px}
+.modal-bd h5{color:var(--accent);text-transform:uppercase;letter-spacing:1px;font-size:.74rem;font-weight:900;margin:18px 0 5px}
 .modal-bd h5:first-child{margin-top:0}
-.modal-bd p{color:var(--text);font-size:.96rem;margin-bottom:6px}
-.modal-bd ul{margin:4px 0 6px 20px;color:var(--text);font-size:.96rem}
-.modal-bd li{margin-bottom:4px}
+.modal-bd p{color:var(--text);font-size:.93rem;line-height:1.55;margin-bottom:4px}
+.modal-bd ul{margin:2px 0 4px 18px;color:var(--text);font-size:.93rem}
+.modal-bd li{margin-bottom:2px;line-height:1.45}
 .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
 .tag{font-size:.76rem;font-weight:700;color:var(--petrol2);background:var(--bg);border:1px solid var(--line);padding:5px 12px;border-radius:20px}
 .todo{margin-top:18px;font-size:.84rem;color:var(--muted);background:rgba(22,160,133,.06);border:1px dashed rgba(22,160,133,.4);
@@ -157,7 +157,16 @@ footer{text-align:center;color:var(--muted);font-size:.82rem;padding:30px 0 40px
 .leaflet-container{font-family:inherit}
 .gallery{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:6px}
 .gimg{position:relative;margin:0;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:var(--bg)}
-.gimg img{display:block;width:100%;height:160px;object-fit:cover}
+.gimg img{display:block;width:100%;height:160px;object-fit:cover;cursor:zoom-in;transition:transform .3s}
+.gimg:hover img{transform:scale(1.04)}
+.lightbox{position:fixed;inset:0;z-index:95;background:rgba(12,18,21,.93);display:flex;align-items:center;
+  justify-content:center;padding:26px;opacity:0;pointer-events:none;transition:opacity .2s;cursor:zoom-out}
+.lightbox.open{opacity:1;pointer-events:auto}
+.lightbox img{max-width:94vw;max-height:86vh;border-radius:10px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.lightbox figcaption{position:absolute;bottom:18px;left:0;right:0;text-align:center;color:#dfe7e9;font-size:.85rem}
+.lb-close{position:absolute;top:16px;right:20px;width:38px;height:38px;border:none;border-radius:50%;
+  background:rgba(255,255,255,.16);color:#fff;font-size:1.3rem;cursor:pointer;transition:background .2s}
+.lb-close:hover{background:var(--accent)}
 .gimg figcaption{font-size:.78rem;color:var(--muted);padding:6px 10px}
 .gimg .ph{display:none}
 .gimg.missing .ph{display:flex;align-items:center;justify-content:center;height:110px;padding:10px;
@@ -174,7 +183,7 @@ footer{text-align:center;color:var(--muted);font-size:.82rem;padding:30px 0 40px
 <nav><div class="wrap">
   <div class="brand">Frederik <span>Bischoff</span></div>
   <div class="navlinks">
-    <a href="#weg">Mein Weg</a>
+    <a href="#weg">Werdegang</a>
     <a href="#skills">Skills</a>
     <a href="#kontakt">Kontakt</a>
   </div>
@@ -187,9 +196,9 @@ footer{text-align:center;color:var(--muted);font-size:.82rem;padding:30px 0 40px
     <h1>Frederik Bischoff</h1>
     <div class="role">B.Eng. Maschinenbau · M.Sc. Mechatronik <span style="color:var(--muted);font-weight:400">(i.&nbsp;A.)</span></div>
     <p class="lead">Vom Maschinenbau in die Leistungselektronik: Wechselrichter, Batteriespeicher und die
-      Simulation elektrischer Systeme – mit Leidenschaft für die Energiewende. Ein Blick auf meinen Weg.</p>
+      Simulation elektrischer Systeme, mit Leidenschaft für die Energiewende</p>
     <div class="cta">
-      <a class="btn btn-primary" href="#weg">Meinen Weg entdecken
+      <a class="btn btn-primary" href="#weg">Werdegang ansehen
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg></a>
       <a class="btn btn-ghost" href="https://www.linkedin.com/in/frederikbischoff/" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C21.4 8.65 22 11 22 14.1V21h-4v-6.1c0-1.45-.03-3.3-2-3.3-2 0-2.3 1.57-2.3 3.2V21h-4z"/></svg>
@@ -204,8 +213,7 @@ footer{text-align:center;color:var(--muted);font-size:.82rem;padding:30px 0 40px
 <section class="section" id="weg"><div class="wrap">
   <div class="shead">
     <div class="kick">Zeitstrahl</div>
-    <h2>Mein Weg</h2>
-    <p>Scrolle durch die Stationen – Meilensteine (★) öffnen ein Detail-Kapitel.</p>
+    <h2>Werdegang</h2>
   </div>
   <div class="timeline" id="timeline">
     <div class="tl-line"></div>
@@ -217,7 +225,7 @@ footer{text-align:center;color:var(--muted);font-size:.82rem;padding:30px 0 40px
 <section class="section" id="skills" style="background:#fff;border-block:1px solid var(--line)"><div class="wrap">
   <div class="shead">
     <div class="kick">Kompetenzen</div>
-    <h2>Womit ich arbeite</h2>
+    <h2>Werkzeuge und Methoden</h2>
   </div>
   <div class="skills" id="skills-grid"></div>
 </div></section>
@@ -225,7 +233,7 @@ footer{text-align:center;color:var(--muted);font-size:.82rem;padding:30px 0 40px
 <section class="section" id="kontakt"><div class="wrap">
   <div class="contact">
     <h2>Lassen Sie uns sprechen</h2>
-    <p>Ob PV-Projekte, Leistungselektronik oder Batteriespeicher – ich freue mich auf den Austausch.</p>
+    <p>Ob PV-Projekte, Leistungselektronik oder Batteriespeicher, ich freue mich über den Austausch.</p>
     <div class="cta">
       <a class="btn btn-primary" href="mailto:bischoff.frederik@gmx.de">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 6l10 7 10-7"/></svg>
@@ -242,9 +250,15 @@ footer{text-align:center;color:var(--muted);font-size:.82rem;padding:30px 0 40px
   <div class="modal" id="modal" role="dialog" aria-modal="true"></div>
 </div>
 
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" aria-label="Schließen">×</button>
+  <img id="lightbox-img" src="" alt="">
+  <figcaption id="lightbox-cap"></figcaption>
+</div>
+
 <script>
 /* ============================================================
-   DATEN  –  hier kannst du alles bequem bearbeiten/ergänzen.
+   DATEN,  hier kannst du alles bequem bearbeiten/ergänzen.
    Jede Station: {year, title, org, loc, text, icon, milestone?}
    milestone verweist per Key auf DETAILS unten.
 ============================================================ */
@@ -262,51 +276,51 @@ const ICON = {
 
 const STATIONS = [
   {year:'2010 – 2019', title:'Allgemeine Hochschulreife', org:'Gymnasium Remchingen', loc:'Remchingen', icon:'school',
-   text:'Naturwissenschaftlicher Schwerpunkt. Drei Jahre Schülersprecher, Fördervereinspreis für besonderes Engagement.',
+   text:'Naturwissenschaftlicher Schwerpunkt, drei Jahre Schülersprecher, Fördervereinspreis für besonderes Engagement',
    geo:{lat:48.954587457589184,lng:8.57620565503179,zoom:16}},
   {year:'2015 – 2020', title:'Aushilfskraft Landwirtschaft', org:'Betrieb Michael Uckele', loc:'Karlsbad', icon:'brief',
-   text:'Mitarbeit im landwirtschaftlichen Betrieb mit Fokus auf Landmaschinentechnik – Ursprung der Leidenschaft für Technik.',
+   text:'Mitarbeit im landwirtschaftlichen Betrieb mit Fokus auf Landmaschinentechnik, Ursprung der Leidenschaft für Technik',
    geo:{lat:48.93665242431679,lng:8.495770717427403,zoom:16}},
-  {year:'2016 – 2017', title:'Schulisches Auslandsjahr', org:'Evergreen Highschool, Seattle', loc:'USA', icon:'globe',
-   text:'Ein Jahr in den USA – über eigene Grenzen hinausgewachsen, Englisch verbessert, neue Kultur & Sport kennengelernt.',
-   geo:{lat:47.500394723019014,lng:-122.3434693568073,zoom:16}},
   {year:'2016', title:'Praktikum Straßen- & Brückenbau', org:'Regierungspräsidium Karlsruhe', loc:'BAB 8, Karlsbad', icon:'brief',
-   text:'Baustelle 6-streifiger Ausbau der BAB 8 zwischen Karlsbad und Pforzheim-West.',
+   text:'Baustelle 6-streifiger Ausbau der BAB 8 zwischen Karlsbad und Pforzheim-West',
    geo:{lat:48.9339558,lng:8.5561150,zoom:15}},
+  {year:'2016 – 2017', title:'Schulisches Auslandsjahr', org:'Evergreen Highschool, Seattle', loc:'USA', icon:'globe',
+   text:'Über eigene Grenzen hinauswachsen, Verbessern der Englischkenntnisse, interkulturelle Erfahrung',
+   geo:{lat:47.500394723019014,lng:-122.3434693568073,zoom:16}},
   {year:'2019 – 2020', title:'Volontariat', org:'Purtatorii de Faclie, Râsnov', loc:'Rumänien', icon:'heart',
-   text:'Leitung von Skikursen und Baustellentätigkeiten für ein neues Freizeithaus – Verantwortung und Teamführung.',
+   text:'Baustellentätigkeiten für ein neues Freizeithaus',
    geo:{lat:45.52471147147974,lng:25.446504337013664,zoom:15}},
   {year:'2020', title:'Vorpraktikum Maschinenbau', org:'Strohheker-Schulz Stanz- und Hybridtechnik', loc:'Pforzheim', icon:'brief',
-   text:'Einblick in Metallverarbeitung, Konstruktion und Qualitätssicherung.',
+   text:'Einblick in Metallverarbeitung, Konstruktion und Qualitätssicherung',
    geo:{lat:48.858415731803376,lng:8.701641862420166,zoom:16}},
   {year:'2020 – 2024', title:'Bachelorstudium Maschinenbau (B.Eng.)', org:'HTWG Hochschule Konstanz', loc:'Konstanz', icon:'cap',
-   text:'Vertiefung Mechatronik, E-Mobilität und Fahrzeugtechnik – der Grundstein für die Elektrotechnik.',
+   text:'Vertiefungsrichtung Mechatronik, E-Mobilität und Fahrzeugtechnik',
    geo:{lat:47.66786554235014,lng:9.170969812158194,zoom:16}},
   {year:'2021 – 2022', title:'Tutor Technische Mechanik & Mathematik', org:'HTWG Konstanz', loc:'Konstanz', icon:'cap',
-   text:'Fachliche Betreuung von Erstsemesterstudierenden im Maschinenbau.',
+   text:'Fachliche Betreuung von Erstsemesterstudierenden im Maschinenbau',
    geo:{lat:47.66786554235014,lng:9.170969812158194,zoom:16}},
   {year:'2022', title:'Industriepraktikum', org:'Horsch Maschinen GmbH', loc:'Schwandorf', icon:'brief',
-   text:'Entwicklung einer Erweiterung für die moderne Einzelkorn-Sätechnik.',
+   text:'Entwicklung einer Erweiterung für die moderne Einzelkorn-Sätechnik',
    geo:{lat:49.3334833174854,lng:12.060420463643068,zoom:16}},
   {year:'2022 – 2023', title:'Werkstudent', org:'Horsch Maschinen GmbH', loc:'Schwandorf', icon:'brief',
-   text:'Begleitung des Entwicklungsprojekts bis zur Serienreife – Einblick in zentrale Prozesse des Ingenieurwesens.',
+   text:'Begleitung des Entwicklungsprojekts bis zur Serienreife, Einblick in zentrale Prozesse des Ingenieurwesens',
    geo:{lat:49.3334833174854,lng:12.060420463643068,zoom:16}},
   {year:'2023 – 2024', title:'Bachelorarbeit', org:'Karlsruher Institut für Technologie (KIT)', loc:'Karlsruhe', icon:'battery',
-   text:'Software-Framework zur automatisierten Analyse von Batteriespeichersystemen.', milestone:true, detail:'ba',
+   text:'Software-Framework zur automatisierten Analyse von Batteriespeichersystemen', milestone:true, detail:'ba',
    geo:{lat:49.0942,lng:8.4318,zoom:16}},
-  {year:'2023', title:'PV-Anlage 21 kWp – Privatprojekt', org:'Garagendach der Eltern', loc:'', icon:'sun',
-   text:'Eigenverantwortliche Planung & Umsetzung – 21 kWp mit SMA-Hybrid-Wechselrichter und 16,6-kWh-BYD-Speicher.', detail:'pv'},
+  {year:'2023', title:'PV-Anlage 21 kWp, Privatprojekt', org:'Garagendach der Eltern', loc:'', icon:'sun',
+   text:'Eigenverantwortliche Planung & Umsetzung, 21 kWp mit SMA Wechselrichter und 16,6-kWh-BYD-Speicher', detail:'pv'},
   {year:'seit 2024', title:'Masterstudium Mechatronik (M.Sc.)', org:'Universität Stuttgart', loc:'Stuttgart', icon:'cpu',
-   text:'Schwerpunkt Schaltungstechnik, Leistungselektronik, elektrische Maschinen und deren Ansteuerung.',
+   text:'Schwerpunkt Schaltungstechnik, Leistungselektronik, elektrische Maschinen und deren Ansteuerung',
    geo:{lat:48.746043963643615,lng:9.105502120971805,zoom:16}},
   {year:'seit 2024', title:'Werkstudent Qualitätssicherung', org:'STIHL', loc:'Waiblingen', icon:'brief',
-   text:'Automatisierung mit Python & VBA sowie eigene Hardwareentwicklung.',
+   text:'Automatisierung mit Python & VBA sowie eigene Hardwareentwicklung',
    geo:{lat:48.85643520526851,lng:9.328969984517034,zoom:16}},
   {year:'2026', title:'Masterarbeit', org:'ISW, Universität Stuttgart', loc:'Stuttgart', icon:'cpu',
-   text:'Echtzeit-Verlusterfassung von GaN-HEMTs in einem dreiphasigen Umrichter.', milestone:true, detail:'ma',
+   text:'Echtzeitfähige Modellierung der Schaltverluste von GaN-Transistoren für eine FPGA-basierte Antriebsplattform', milestone:true, detail:'ma',
    geo:{lat:48.78131743804567,lng:9.165863475356465,zoom:16}},
   {year:'Heute', title:'Auf dem Weg in die Energiewende', org:'Nächstes Kapitel', loc:'', icon:'flag',
-   text:'Technische Tiefe, Projektverantwortung und Begeisterung für erneuerbare Energien – bereit für den nächsten Schritt.'}
+   text:'Technische Tiefe, Projektverantwortung und Begeisterung für erneuerbare Energien - Bereit für den nächsten Schritt'}
 ];
 
 /* ============================================================
@@ -316,60 +330,126 @@ const STATIONS = [
 ============================================================ */
 const DETAILS = {
   ba:{
-    year:'2023 – 2024', title:'Bachelorarbeit am KIT', org:'Batterietechnikum · Karlsruher Institut für Technologie',
+    year:'2023 – 2024', title:'Modulares Softwareframework für Energiespeicher-Messungen',
+    org:'Bachelorarbeit · Karlsruher Institut für Technologie (KIT)',
     body:`
-      <h5>Überblick</h5>
-      <p>Im Rahmen meiner Bachelorarbeit habe ich ein Software-Framework entwickelt, das die
-      Analyse von Batteriespeichersystemen erleichtert und automatisiert.</p>
       <h5>Aufgabe</h5>
-      <p>Batteriespeicher automatisiert auswerten und die wesentlichen Kennzahlen moderner
-      Speichersysteme ermitteln – als Grundlage für die objektive Bewertung kommerzieller Systeme.</p>
-      <h5>Wirkung</h5>
+      <p>Am KIT werden Energiespeichersysteme, Kombinationen aus Wechselrichter und Batterie,
+      auf Prüfständen vermessen. Die Auswertung dieser Messdaten lief zuvor über historisch
+      gewachsene Einzelskripte. Aufgabe war es, ein durchgängiges Softwareframework
+      zu entwerfen und zu implementieren, welches die Messdaten halbautomatisch auswertet,
+      einheitlich visualisiert und für spätere Erweiterungen kompatibel bleibt.</p>
+
+      <h5>Die Toolchain</h5>
+      <p>Entstanden ist ein Framework aus eigenständigen Komponenten mit klar definierten
+      Schnittstellen. Jede besitzt eine eigene Oberfläche und lässt sich unabhängig ausführen:</p>
       <ul>
-        <li>Die Ergebnisse fließen bis heute in den <b>Effizienzleitfaden für PV-Speichersysteme</b> der HTW Berlin ein.</li>
-        <li>Sie unterstützen die Bewertung kommerzieller Batteriespeicher am KIT.</li>
-      </ul>`,
-    tags:['Batteriespeicher','Datenauswertung','Python','Effizienzkennzahlen','PV-Speicher'],
-    todo:'Für den Ausbau: Note, konkrete Kennzahlen/KPIs, verwendete Tools & Bibliotheken, ggf. ein Diagramm oder Screenshot des Frameworks.'
+        <li><b>Measurement Overseer:</b> Übersicht aller Messungen</li>
+        <li><b>PopUpWindow:</b> Datenimport, einheitlicher Datensatz</li>
+        <li><b>Efficiency Evaluator:</b> austauschbare Auswertemodule</li>
+        <li><b>Plotter:</b> zentrale Diagrammerzeugung</li>
+      </ul>
+      <p>Parallel dazu wurde die Datenablage neu strukturiert: Auswertungen werden nicht mehr
+      nach Auswertungsart sortiert, sondern dem jeweiligen Teststand zugeordnet. Pfadkonfigurations-
+      und Parameterdateien dienen als zentrale Informationsquelle, sodass die Kennzahlen eines
+      Systems automatisch in die Auswertung einfließen.</p>
+
+      <h5>Technik &amp; Methodik</h5>
+      <p>Umgesetzt wurde alles in der MATLAB-App-Designer-Umgebung, welche klassische
+      MATLAB-Programmierung mit der Callback-Logik grafischer Oberflächen verbindet. Nach dem
+      V-Modell als Vorgehensmodell wurde jede Komponente zunächst separat entwickelt und
+      getestet und anschließend in Feedbackrunden mit den späteren Nutzern verfeinert.</p>
+
+      <h5>Ergebnis</h5>
+      <p>Das Framework ist modular aufgebaut, sodass neue Auswertungen ergänzt werden können,
+      ohne die bestehenden Komponenten anzufassen. Die klare Struktur macht die Software
+      robuster gegenüber Fehlern und erleichtert die Fehlersuche im Code deutlich. Durch die
+      Migration in den App Designer bleibt sie außerdem mit künftigen MATLAB-Versionen
+      kompatibel. Eingesetzt wird sie am KIT zur Bewertung kommerzieller Batteriespeicher.</p>`,
+    tags:['MATLAB App Designer','V-Modell','Modulare Architektur','Messdatenauswertung','Energiespeicher','GUI-Entwicklung'],
+    images:[
+      {file:'ba_software.jpg', cap:'Measurement Overseer, zentrale Übersicht aller Messungen'},
+      {file:'ba_auswertung_2.jpg', cap:'Efficiency Evaluator, Auswerteoberfläche mit Leistungskanälen'},
+      {file:'ba_auswertung_1.jpg', cap:'Automatisch erzeugtes Diagramm einer Standby-Messung'}
+    ]
   },
   pv:{
     year:'2023', title:'PV-Anlage 21 kWp mit Batteriespeicher', org:'Privatprojekt · Flach- und Garagendach',
     body:`
-      <h5>Überblick</h5>
-      <p>Eigenverantwortliche Planung und technische Umsetzung einer Photovoltaikanlage mit
-      21 kWp Gesamtleistung auf Flach- und Garagendach – inklusive Batteriespeicher und Netzanschluss.</p>
-      <h5>Technische Eckdaten</h5>
+      <h5>Planung</h5>
+      <p>Ausgangspunkt waren die Dachflächen zweier Garagen. Die nutzbaren Flächen wurden
+      aufgenommen sowie Ausrichtung und Verschattung bewertet. Daraus entstanden Modulbelegung,
+      Strangaufteilung und die Auslegung der Komponenten.</p>
+
+      <h5>Umsetzung auf zwei Dächern</h5>
+      <p>Beide Dächer verlangten eine eigene Lösung. Auf einem der beiden sind die Module
+      aufgeständert und mit Ballaststeinen beschwert, so bleibt die Dachhaut ohne
+      Durchdringung. Auf dem zweiten kam eine Unterkonstruktion aus Stahl zum Einsatz, sie
+      erlaubt den optimalen Neigungswinkel und damit den maximalen Ertrag.</p>
+
+      <h5>Technik</h5>
       <ul>
-        <li><b>PV-Leistung gesamt:</b> 21 kWp</li>
-        <li><b>Hybrid-Wechselrichter:</b> SMA Sunny Tripower Smart Energy – 10 kW</li>
-        <li><b>Batteriespeicher:</b> BYD Battery-Box Premium HVM – 16,6 kWh</li>
-        <li><b>Garage 1:</b> zusätzlicher SMA-Wechselrichter, 8 kWp Modulleistung</li>
+        <li><b>PV-Leistung:</b> 21 kWp</li>
+        <li><b>Wechselrichter:</b> SMA Sunny Tripower Hybrid + Tripower</li>
+        <li><b>Speicher:</b> BYD Battery-Box Premium HVM, 16,6 kWh</li>
       </ul>
-      <h5>Meine Rolle</h5>
-      <p>Auslegung der Komponenten, Berücksichtigung relevanter Normen, Abwicklung des
-      Netzanschlusses sowie Themen wie Blindleistungskompensation, Netzverträglichkeit und Leistungsfaktor cos&nbsp;φ.</p>`,
-    tags:['21 kWp','SMA Hybrid 10 kW','BYD HVM 16,6 kWh','Netzanschluss','cos φ','Eigenbau'],
+      <p>Beide Wechselrichter arbeiten zusammen: Der Sunny Tripower Hybrid führt den
+      Batteriespeicher, der zweite Sunny Tripower speist seinen Anlagenteil ein und lädt über
+      den Hybrid ebenfalls die Batterie.</p>
+
+      <h5>Ertrag im Betrieb</h5>
+      <ul>
+        <li><b>Jährliche Erzeugung:</b> über 21 MWh</li>
+        <li><b>Autarkiegrad:</b> 85 %</li>
+      </ul>
+
+      <h5>Anmeldung</h5>
+      <p>Organisatorisch folgten Anmeldung beim Netzbetreiber, Eintragung im
+      Marktstammdatenregister und Einhaltung der Normen bis zur Inbetriebnahme.</p>`,
+    tags:['21 kWp','> 21 MWh/Jahr','85 % Autarkie','SMA Sunny Tripower Hybrid','SMA Sunny Tripower','BYD HVM 16,6 kWh','Planung','Anmeldung'],
     images:[
-      {file:'pv_flachdach.jpg', cap:'PV-Module auf dem Flachdach'},
-      {file:'cad_garage_2.jpg', cap:'CAD-Planung Garagendach'},
-      {file:'garage_1.jpg', cap:'Garage 1 mit PV-Anlage'}
-    ],
-    todo:'Lege die Bilder pv_flachdach.jpg, cad_garage_2.jpg und garage_1.jpg im Ordner assets/ ab – sie erscheinen dann automatisch. Optional: Jahresertrag & Autarkiegrad ergänzen.'
+      {file:'pv_garage_1.jpeg', cap:'Aufgeständerte PV-Module auf dem Flachdach'},
+      {file:'cad_garage_2.jpeg', cap:'CAD-Planung der zweiten Garage'},
+      {file:'pv_garage_2.jpeg', cap:'Untere Anlage mit Stahl-Unterkonstruktion'},
+      {file:'ertrag_juni_2026.png', cap:'Tagesertrag im Juni 2026, aufgeteilt auf beide Wechselrichter'}
+    ]
   },
   ma:{
-    year:'2026', title:'Masterarbeit: GaN-Wechselrichter', org:'ISW · Universität Stuttgart',
+    year:'2026', title:'Echtzeitfähige Modellierung von Schaltverlusten',
+    org:'Masterarbeit · ISW, Universität Stuttgart',
     body:`
-      <h5>Thema</h5>
-      <p>Echtzeit-Verlusterfassung von <b>GaN-HEMTs</b> (Galliumnitrid-Transistoren) in einem
-      dreiphasigen Umrichter.</p>
-      <h5>Warum GaN?</h5>
-      <p>GaN ist eine Halbleitertechnologie, die durch höhere Schaltfrequenzen und geringere
-      Verluste als Silizium künftig <b>kompaktere und effizientere Wechselrichter</b> ermöglicht.</p>
-      <h5>Mein Gewinn</h5>
-      <p>Tiefe Einblicke in die elektrischen Zusammenhänge bis auf die Halbleiterebene – ein
-      fundiertes Verständnis für anspruchsvolle Aufgaben in den erneuerbaren Energien.</p>`,
-    tags:['GaN-HEMT','Leistungselektronik','dreiphasiger Umrichter','Verlustmessung','Echtzeit'],
-    todo:'Für den Ausbau (sobald verfügbar): Messaufbau/Foto, erste Ergebnisse, Simulationswerkzeuge, Betreuer/Kooperation, Abgabe & Note.'
+      <h5>Worum es geht</h5>
+      <p>Die Arbeit entwickelt ein Modell, welches die Schaltverluste von GaN-Transistoren berechnet, sodass die Verluste dem Servoantrieb in Echtzeit bereitgestellt werden können.</p>
+
+      <h5>Wofür GaN gebraucht wird</h5>
+      <p>Galliumnitrid löst Silizium in der Leistungselektronik zunehmend ab. GaN-Transistoren
+      schalten um ein Vielfaches schneller und verlieren dabei deutlich weniger Energie. Dies
+      wirkt sich unmittelbar auf Kühlkörper, Bauteilgrößen und den
+      Wirkungsgrad aus.</p>
+      <p>Hiervon profitieren genau die Anwendungen, welche die Energiewende tragen: Wechselrichter
+      für Photovoltaik, Ladetechnik für Elektrofahrzeuge, Antriebe in Maschinen und Robotern.
+      Wo heute ein schwerer Umrichter im Schaltschrank sitzt, kann künftig ein deutlich
+      kompakteres Gerät dieselbe Leistung bringen.</p>
+
+      <h5>Das Forschungsziel</h5>
+      <p>Je schneller geschaltet wird, desto schwerer lassen sich die
+      Verluste vorhersagen. Bisher werden sie aus Datenblättern grob abgeschätzt, wobei die Sicherheitsreserven entsprechend groß ausfallen.</p>
+      <p>Ziel ist ein Verlustmodell, welches während des Betriebs auf einem FPGA mitläuft und
+      die tatsächlich entstehende Verlustleistung in Echtzeit liefert. Vorteile sind:</p>
+      <ul>
+        <li>Bauteile näher an ihrer Grenze betreiben</li>
+        <li>Überlast erkennen, bevor Schaden entsteht</li>
+        <li>Kühlung am tatsächlichen Bedarf ausrichten</li>
+      </ul>
+
+      `,
+    tags:['GaN','Leistungselektronik','FPGA','Echtzeit','Servoantriebe','Energieeffizienz'],
+    images:[
+      {file:'ma_gan_vs_si.svg', cap:'Warum GaN: der Verlust je Schaltvorgang schrumpft deutlich'},
+      {file:'ma_board.jpg', cap:'GaN-Leistungsplatine im Laboraufbau'},
+      {file:'ma_ltspice.png', cap:'Simulationsmodell des dreiphasigen Umrichters'},
+      {file:'ma_lowside.png', cap:'Simulierte Schaltvorgänge am Schalter'}
+    ]
   }
 };
 
@@ -423,7 +503,20 @@ window.addEventListener('resize',onScroll);
 onScroll();
 
 /* ---------- Skills ---------- */
-const SKILLS=[['MATLAB / Simulink',85],['Python / C / Embedded',70],['LTspice',70],['CAD / Konstruktion',75],['Leistungselektronik',70],['FPGA',30]];
+const SKILLS=[
+  ['MATLAB / Simulink',85],
+  ['NI DIAdem',75],
+  ['LTspice',70],
+  ['Altium Designer',60],
+  ['Leistungselektronik',70],
+  ['FPGA',30],
+  ['Python',75],
+  ['C-Embedded',65],
+  ['VBA',80],
+  ['TwinCAT / CODESYS',60],
+  ['CAD / Konstruktion',75],
+  ['MS Office',90]
+];
 const sg=document.getElementById('skills-grid');
 SKILLS.forEach(([n,v])=>{
   const d=document.createElement('div');d.className='skill';
@@ -513,12 +606,28 @@ function closeModal(){
   if(_map){_map.remove();_map=null;}
   overlay.classList.remove('open');document.body.style.overflow='';
 }
+/* Lightbox für Bilder */
+const lightbox=document.getElementById('lightbox'),
+      lbImg=document.getElementById('lightbox-img'),
+      lbCap=document.getElementById('lightbox-cap');
+function openLightbox(src,cap){
+  lbImg.src=src; lbImg.alt=cap||''; lbCap.textContent=cap||'';
+  lightbox.classList.add('open');
+}
+function closeLightbox(){lightbox.classList.remove('open'); lbImg.src='';}
+
 document.addEventListener('click',e=>{
+  const gi=e.target.closest('.gimg img');
+  if(gi){openLightbox(gi.getAttribute('src'), gi.getAttribute('alt'));return;}
+  if(e.target.closest('.lb-close')||e.target===lightbox||e.target===lbImg){closeLightbox();return;}
   const more=e.target.closest('.more'); if(more){openDetail(more.dataset.key);return;}
   const org=e.target.closest('.orglink'); if(org){openMap(+org.dataset.i);return;}
   if(e.target===overlay)closeModal();
 });
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+document.addEventListener('keydown',e=>{
+  if(e.key!=='Escape')return;
+  if(lightbox.classList.contains('open'))closeLightbox(); else closeModal();
+});
 
 document.getElementById('yr').textContent=new Date().getFullYear();
 </script>

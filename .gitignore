@@ -14,6 +14,10 @@ vorschau_offline.html
 # README nicht veroeffentlichen
 README.md
 
+# Original-Bilder mit Leerzeichen/Umlaut (ersetzt durch ma_ltspice.png / ma_lowside.png)
+LTSpice.png
+Übersicht Low-Side.png
+
 # Editor / IDE
 .vscode/
 .idea/
